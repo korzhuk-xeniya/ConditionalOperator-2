@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        task1 ();
-        task2 ();
-        task3 ();
-        task4 ();
-        task5 ();
+        task1();
+        task2();
+        task3();
+        task4();
+        task5();
     }
-    public static void task1 () {
+
+    public static void task1() {
         System.out.println("Задача 1");
         int clientOS = 0;
         if (clientOS == 0) {
@@ -17,7 +18,8 @@ public class Main {
             System.out.println("Установите версию приложения Android по ссылке");
         }
     }
-    public static void task2 () {
+
+    public static void task2() {
         System.out.println("Задача 2");
         int clientOS = 1;
         int clientDeviceYear = 2015;
@@ -36,21 +38,23 @@ public class Main {
             }
         }
     }
-    public static void task3 () {
+
+    public static void task3() {
         System.out.println("Задача 3");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите год");
         int year = scanner.nextInt();
-        byte k1 = 4;
-        byte k2 = 100;
-        short k3 = 400;
-        if (year % k1 == 0 && year % k2 != 0 || year % k2 == 0 && year % k3 == 0) {
+        byte coefficientEach4 = 4;
+        byte coefficientEach100 = 100;
+        short coefficientEach400 = 400;
+        if (year % coefficientEach4 == 0 && year % coefficientEach100 != 0 || year % coefficientEach100 == 0 && year % coefficientEach400 == 0) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
         }
     }
-    public static void task4 () {
+
+    public static void task4() {
         System.out.println("Задача 4");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите расстояние от офиса до адреса доставки в км");
@@ -61,59 +65,44 @@ public class Main {
         byte k3 = 100;
         if (deliveryDistance < k1) {
             daysOfDelivery = daysOfDelivery + 0;
-            System.out.println( "Потребуется дней: " + daysOfDelivery);
-            } else if (deliveryDistance < k2) {
+            System.out.println("Потребуется дней: " + daysOfDelivery);
+        } else if (deliveryDistance < k2) {
             daysOfDelivery = daysOfDelivery + 1;
-            System.out.println( "Потребуется дней: " + daysOfDelivery);
-                } else if (deliveryDistance <= k3) {
-                    daysOfDelivery = daysOfDelivery + 2 ;
-                    System.out.println( "Потребуется дней: " + daysOfDelivery);
-                    } else {
-                        System.out.println("Доставка не осуществляется");
-                        }
+            System.out.println("Потребуется дней: " + daysOfDelivery);
+        } else if (deliveryDistance <= k3) {
+            daysOfDelivery = daysOfDelivery + 2;
+            System.out.println("Потребуется дней: " + daysOfDelivery);
+        } else {
+            System.out.println("Доставка не осуществляется");
+        }
 
     }
-    public static void task5 () {
+
+    public static void task5() {
         System.out.println("Задача 5");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите номер месяца в году");
         int monthNumber = scanner.nextInt();
         switch (monthNumber) {
             case 1:
-                System.out.println("Январь");
-                break;
             case 2:
-                System.out.println("Февраль");
+            case 12:
+                System.out.println("Зима");
                 break;
             case 3:
-                System.out.println("Март");
-                break;
             case 4:
-                System.out.println("Апрель");
-                break;
             case 5:
-                System.out.println("Май");
+                System.out.println("Весна");
                 break;
             case 6:
-                System.out.println("Июнь");
-                break;
             case 7:
-                System.out.println("Июль");
-                break;
             case 8:
-                System.out.println("Август");
+                System.out.println("Лето");
                 break;
             case 9:
-                System.out.println("Сентябрь");
-                break;
             case 10:
-                System.out.println("Октябрь");
-                break;
             case 11:
-                System.out.println("Ноябрь");
-                break;
-            case 12:
-                System.out.println("Декабрь");
+                System.out.println("Осень");
                 break;
             default:
                 System.out.println("Такого месяца нет");
