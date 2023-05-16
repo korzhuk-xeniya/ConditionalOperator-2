@@ -60,16 +60,16 @@ public class Main {
         System.out.println("Введите расстояние от офиса до адреса доставки в км");
         int deliveryDistance = scanner.nextInt();
         int daysOfDelivery = 1;
-        byte k1 = 20;
-        byte k2 = 60;
-        byte k3 = 100;
-        if (deliveryDistance < k1) {
+        byte distance20 = 20;
+        byte distance60 = 60;
+        byte distance100 = 100;
+        if (deliveryDistance < distance20) {
             daysOfDelivery = daysOfDelivery + 0;
             System.out.println("Потребуется дней: " + daysOfDelivery);
-        } else if (deliveryDistance < k2) {
+        } else if (deliveryDistance < distance60) {
             daysOfDelivery = daysOfDelivery + 1;
             System.out.println("Потребуется дней: " + daysOfDelivery);
-        } else if (deliveryDistance <= k3) {
+        } else if (deliveryDistance <= distance100) {
             daysOfDelivery = daysOfDelivery + 2;
             System.out.println("Потребуется дней: " + daysOfDelivery);
         } else {
